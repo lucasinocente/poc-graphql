@@ -1,0 +1,26 @@
+
+{
+    "accounts": [
+        {
+            "user": "01",
+            "label": "Banpara",
+            "agencia": "01-001",
+            "conta": "01-002",
+            "cpf": "01-003"
+        },
+        {
+            "user": "01",
+            "label": "Topázio",
+            "agencia": "01-0011",
+            "conta": "01-0022",
+            "cpf": "01-0033"
+        },
+        {
+            "user": "02",
+            "label": "Banrisul",
+            "agencia": "02-0011",
+            "conta": "02-0022",
+            "cpf": "02-0033"
+        }
+    ]
+  }

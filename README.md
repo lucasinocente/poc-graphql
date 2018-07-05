@@ -1,26 +1,31 @@
-# SEP GraphQL Server
+# POC GraphQL
 
-What is GraphQL? Learn:
+## To install and run
 
-- https://www.howtographql.com
-- https://graphql.org/learn/
-
-## Install
-
-`npm install`
-
-## Run
-
-`npm start`
-
-## Access
-
-`http://localhost:4000/graphql`
-
-## Query
+### Client
 
 ```
-query {
-  message
-}
+cd /client
+npm install http-server -g
+http-server
 ```
+
+### GraphiQL Server
+
+```
+cd /gqp-server
+npm install
+node server.js
+```
+
+### Rest-API
+
+```
+cd /rest-api
+npm install -g json-server
+json-server --watch accounts.json
+```
+
+### To access
+
+http://localhost:8080/

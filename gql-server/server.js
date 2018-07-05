@@ -1,25 +1,37 @@
 const express = require('express');
 const express_graphql = require('express-graphql');
 const { buildSchema } = require('graphql');
+const fetch = require('node-fetch');
+const cors = require('cors')
 
 // GraphQL schema
 const schema = buildSchema(`
     type Query {
-        message: String
+        accounts: [Account!]!
+    }
+  
+    type Account {
+        user: String!
+        label: String!
+        agencia: String!
+        conta: String!
+        cpf: String!
     }
 `);
 
-// Root resolver
-const root = {
-    message: () => 'Hello World!'
-};
+const resolvers = {
+    accounts: () => {
+        return fetch(`http://localhost:3000/accounts`).then(res => res.json())
+    }
+}
 
-// Create an express server and a GraphQL endpoint
 const app = express();
+
+app.use(cors())
 
 app.use('/graphql', express_graphql({
     schema: schema,
-    rootValue: root,
+    rootValue: resolvers,
     graphiql: true
 }));
 

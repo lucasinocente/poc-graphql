@@ -2,8 +2,10 @@
   "name": "sep-graphql-server",
   "main": "index.js",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
-    "graphql": "^0.13.2"
+    "graphql": "^0.13.2",
+    "node-fetch": "^2.1.2"
   }
 }
